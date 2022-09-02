@@ -7,6 +7,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+#magic
 df = pd.DataFrame({
   'first column': [1, 2, 3, 4],
   'second column': [10, 20, 30, 40]
@@ -14,11 +15,19 @@ df = pd.DataFrame({
 
 df
 
+#basic
 dataframe = np.random.randn(10, 20)
 st.dataframe(dataframe)
 
+#styler
 dataframe = pd.DataFrame(
     np.random.randn(10, 20),
     columns=('col %d' % i for i in range(20)))
 
 st.dataframe(dataframe.style.highlight_max(axis=0))
+
+#table
+dataframe = pd.DataFrame(
+    np.random.randn(10, 20),
+    columns=('col %d' % i for i in range(20)))
+st.table(dataframe)
