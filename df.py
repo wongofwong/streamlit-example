@@ -54,6 +54,13 @@ st.write(x, 'squared is', x * x)
 #text input
 import streamlit as st
 st.text_input("Your name", key="name")
-
 # You can access the value at any point with:
 st.session_state.name
+
+#checkbox
+if st.checkbox('Show dataframe'):
+    chart_data = pd.DataFrame(
+       np.random.randn(20, 3),
+       columns=['a', 'b', 'c'])
+
+    chart_data
