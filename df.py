@@ -11,3 +11,6 @@ df = pd.DataFrame({
 })
 
 df
+
+dataframe = np.random.randn(10, 20)
+st.dataframe(dataframe)
