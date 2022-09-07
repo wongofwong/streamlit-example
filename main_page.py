@@ -67,6 +67,12 @@ components.html(
 
 import plotly as pt
 
+import plotly.express as px
+
+fig = px.line(x=["a","b","c"], y=[1,3,2], title="sample figure")
+print(fig)
+fig.show()
+
 # import streamlit as st
 # import plotly.figure_factory as ff
 # import numpy as np
