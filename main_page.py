@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.markdown("# Main page 🎈")
-st.sidebar.markdown("# Main page 🎈")
+st.markdown("# BERTopic Modeling 🎈")
+st.sidebar.markdown("#BERTopic Modeling 🎈")
