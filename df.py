@@ -82,8 +82,8 @@ import streamlit as st
 #sidebar
 # Add a selectbox to the sidebar:
 add_selectbox = st.sidebar.selectbox(
-    'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone')
+    'BERTopic Model Approaches',
+    ('Default', 'Sentence Transformer', 'Guided Topic Modeling', 'Supervised', 'Semi-supervised')
 )
 
 # Add a slider to the sidebar:
