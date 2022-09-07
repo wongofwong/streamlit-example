@@ -13,7 +13,7 @@ add_selectbox = st.sidebar.selectbox(
 )
 
 add_selectbox = st.sidebar.selectbox(
-    'Dimension',
+    'Dimensionality Reduction',
     ('UMAP', 'PCA', 'Truncated SVD')
 )
 
