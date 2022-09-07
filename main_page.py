@@ -65,13 +65,38 @@ components.html(
     height=600,
 )
 
-import plotly as pt
-
+from dash import Dash, dcc, html, Input, Output
 import plotly.express as px
+import json
 
-fig = px.line(x=["a","b","c"], y=[1,3,2], title="sample figure")
-print(fig)
-fig.show()
+fig = px.line(
+    x=["a","b","c"], y=[1,3,2], # replace with your own data source
+    title="sample figure", height=325
+)
+
+app = Dash(__name__)
+
+app.layout = html.Div([
+    html.H4('Displaying figure structure as JSON'),
+    dcc.Graph(id="graph", figure=fig),
+    dcc.Clipboard(target_id="structure"),
+    html.Pre(
+        id='structure',
+        style={
+            'border': 'thin lightgrey solid', 
+            'overflowY': 'scroll',
+            'height': '275px'
+        }
+    ),
+])
+
+# import plotly as pt
+
+# import plotly.express as px
+
+# fig = px.line(x=["a","b","c"], y=[1,3,2], title="sample figure")
+# print(fig)
+# fig.show()
 
 # import streamlit as st
 # import plotly.figure_factory as ff
