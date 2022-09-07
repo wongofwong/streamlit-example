@@ -65,23 +65,35 @@ add_selectbox = st.sidebar.selectbox(
 #     height=600,
 # )
 
-import streamlit as st
-import plotly.figure_factory as ff
+# import streamlit as st
+# import plotly.figure_factory as ff
 import numpy as np
 
-# Add histogram data
-x1 = np.random.randn(200) - 2
-x2 = np.random.randn(200)
-x3 = np.random.randn(200) + 2
+# # Add histogram data
+# x1 = np.random.randn(200) - 2
+# x2 = np.random.randn(200)
+# x3 = np.random.randn(200) + 2
 
-# Group data together
-hist_data = [x1, x2, x3]
+# # Group data together
+# hist_data = [x1, x2, x3]
 
-group_labels = ['Group 1', 'Group 2', 'Group 3']
+# group_labels = ['Group 1', 'Group 2', 'Group 3']
 
-# Create distplot with custom bin_size
-fig = ff.create_distplot(
-         hist_data, group_labels, bin_size=[.1, .25, .5])
+# # Create distplot with custom bin_size
+# fig = ff.create_distplot(
+#          hist_data, group_labels, bin_size=[.1, .25, .5])
 
-# Plot!
+# # Plot!
+# st.plotly_chart(fig, use_container_width=True)
+
+import plotly.graph_objects as go
+
+fig = go.Figure(
+    data=[go.Bar(x=[1, 2, 3], y=[1, 3, 2])],
+    layout=go.Layout(
+        title=go.layout.Title(text="A Figure Specified By A Graph Object")
+    )
+)
+
+fig.show()
 st.plotly_chart(fig, use_container_width=True)
