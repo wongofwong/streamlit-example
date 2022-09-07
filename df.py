@@ -86,6 +86,16 @@ add_selectbox = st.sidebar.selectbox(
     ('Default', 'Sentence Transformer', 'Guided Topic Modeling', 'Supervised', 'Semi-supervised')
 )
 
+add_selectbox = st.sidebar.selectbox(
+    'Dimension',
+    ('UMAP', 'PCA', 'Truncated SVD')
+)
+
+add_selectbox = st.sidebar.selectbox(
+    'Visualization',
+    ('Topics Word Scores Barchart', 'Intertopic Distance Map', 'Hierarchical Clustering', 'Similarity Heat Map', 'Topic Frequency Distribution')
+)
+
 # Add a slider to the sidebar:
 add_slider = st.sidebar.slider(
     'Select a range of values',
