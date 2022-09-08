@@ -119,6 +119,12 @@ fig = ff.create_distplot(
 # Plot!
 st.plotly_chart(fig, use_container_width=True)
 
+import plotly.express as px
+
+fig = px.line(x=["a","b","c"], y=[1,3,2], title="sample figure")
+print(fig)
+fig.show()
+
 # import plotly.graph_objects as go
 
 # fig = go.Figure(
