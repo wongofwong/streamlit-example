@@ -2,3 +2,6 @@ altair
 pandas
 streamlit
 plotly
+numpy
+scipy
+bertopic
