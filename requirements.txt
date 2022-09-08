@@ -8,3 +8,5 @@ numpy
 scipy
 bertopic
 sentence_transformers
+spacy_langdetect
+json
