@@ -3,7 +3,6 @@ pandas
 streamlit
 plotly
 plotly.express
-plotly.figure_factory
 dash
 numpy
 scipy
