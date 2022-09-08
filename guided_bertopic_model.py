@@ -13,20 +13,20 @@ First, we create embeddings for each seeded topics by joining them and passing t
 Second, we take all words in seed_topic_list and assign them a multiplier larger than 1. Those multipliers will be used to increase the IDF values of the words across all topics thereby increasing the likelihood that a seeded topic word will appear in a topic. This does, however, also increase the chance of an irrelevant topic having unrelated words. In practice, this should not be an issue since the IDF value is likely to remain low regardless of the multiplier. The multiplier is now a fixed value but may change to something more elegant, like taking the distribution of IDF values and its position into account when defining the multiplier.
 """
 
-!pip install sentence_transformers
-!pip install hdbscan
-!pip install UMAP
-!pip install nltk
-!pip install bertopic
-!pip install languages
-#!pip install clean-text
-!pip install spacy_langdetect
-!pip install pyLDAvis
-!pip install matplotlib
-!pip install json
-!pip install stop_word_list
-!pip install clean_text
-!pip install stopwords
+# !pip install sentence_transformers
+# !pip install hdbscan
+# !pip install UMAP
+# !pip install nltk
+# !pip install bertopic
+# !pip install languages
+# #!pip install clean-text
+# !pip install spacy_langdetect
+# !pip install pyLDAvis
+# !pip install matplotlib
+# !pip install json
+# !pip install stop_word_list
+# !pip install clean_text
+# !pip install stopwords
 
 from bertopic import BERTopic
 #from sklearn.datasets import fetch_20newsgroups
@@ -36,28 +36,28 @@ from bertopic import BERTopic
 # category_names = data["target_names"]
 
 import pandas as pd
-df = pd.read_json('/content/clipsubset.json')
-captions = df['caption'].values
+# df = pd.read_json('/content/clipsubset.json')
+# captions = df['caption'].values
 
-df.head()
+# df.head()
 
-captions
+# captions
 
-from langdetect import detect
-captions_eng = []
-all = []
+# from langdetect import detect
+# captions_eng = []
+# all = []
 
-for caption in captions:
-    try:
-        language = detect(caption)
-        if detect(caption) == 'en':
-            captions_eng.append(caption)
-    except:
-        language = "error"
-        print("This row throws and error:", caption)
-    #all.append(language)   
-    #all.append(row)
-captions_eng
+# for caption in captions:
+#     try:
+#         language = detect(caption)
+#         if detect(caption) == 'en':
+#             captions_eng.append(caption)
+#     except:
+#         language = "error"
+#         print("This row throws and error:", caption)
+#     #all.append(language)   
+#     #all.append(row)
+# captions_eng
 
 
 
@@ -450,7 +450,7 @@ opsis_labels = ["Minestrone with beef",
 """Guided Topic Modeling"""
 
 from bertopic import BERTopic
-docs = captions_eng
+docs = opsis_labels
 topic_model = BERTopic(seed_topic_list=opsis_labels)
 topics, probs = topic_model.fit_transform(docs)
 
