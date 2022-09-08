@@ -6,3 +6,5 @@ plotly.express
 dash
 numpy
 scipy
+bertopic
+sentence_transformer
