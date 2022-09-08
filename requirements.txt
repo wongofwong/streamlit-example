@@ -7,4 +7,3 @@ plotly.figure_factory
 dash
 numpy
 scipy
-bertopic
