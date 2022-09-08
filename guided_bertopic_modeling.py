@@ -9,25 +9,25 @@ import pandas as pd
 df = pd.read_json('clipsubset.json')
 captions = df['caption'].values
 
-df.head()
+# df.head()
 
-captions
+# captions
 
-from langdetect import detect
-captions_eng = []
-all = []
+# from langdetect import detect
+# captions_eng = []
+# all = []
 
-for caption in captions:
-    try:
-        language = detect(caption)
-        if detect(caption) == 'en':
-            captions_eng.append(caption)
-    except:
-        language = "error"
-        print("This row throws and error:", caption)
-    #all.append(language)   
-    #all.append(row)
-captions_eng
+# for caption in captions:
+#     try:
+#         language = detect(caption)
+#         if detect(caption) == 'en':
+#             captions_eng.append(caption)
+#     except:
+#         language = "error"
+#         print("This row throws and error:", caption)
+#     #all.append(language)   
+#     #all.append(row)
+# captions_eng
 
 
 
@@ -420,7 +420,7 @@ opsis_labels = ["Minestrone with beef",
 """Guided Topic Modeling"""
 
 from bertopic import BERTopic
-docs = captions_eng
+docs = captions #_eng
 topic_model = BERTopic(seed_topic_list=opsis_labels)
 topics, probs = topic_model.fit_transform(docs)
 
