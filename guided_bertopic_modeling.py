@@ -6,7 +6,7 @@ from bertopic import BERTopic
 # category_names = data["target_names"]
 
 import pandas as pd
-df = pd.read_json('/content/clipsubset.json')
+df = pd.read_json('clipsubset.json')
 captions = df['caption'].values
 
 df.head()
