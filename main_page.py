@@ -37,6 +37,9 @@ components.html(
           <h5 class="mb-0">
             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             Topic Model Inputs
+            
+            seed_topic_list=['Minestrone with beef', 'Beef chili', 'Oatmeal with flax seeds and apple', 'Blueberry shortcake', 'Roast beef sandwich', 'Turkey Sandwich', 'Classic Caesar salad', 'Mixed berry shortcake', 'Veggie sandwich', 'Classic Caesar salad with edamame', 'Oatmeal with diced apple', 'Classic minestrone with leafy greens', 'Chocolate chip cookies with pecans', 'Lasagna with meat sauce', 'Strawberry shortcake', 'Vegetarian pizza', 'Chocolate chip cookies', 'Oatmeal with diced apple and pistachios', 'Classic Caesar salad with chicken', 'Vegetarian lasagna with spinach', 'Classic minestrone', 'Chicken and bean chili', 'Vegetarian lasagna', 'Beef Steak', 'Tilapia', 'Banana', 'Green beans', 'pecans', 'Baked Beans', 'Cherries', 'Macaroni and cheese', 'brown rice', 'Brownie ', 'White Bread', 'Carrots', 'green peas', 'cornbread', 'Potato', 'Canned pear halves', 'Corn', 'String cheese', 'Fried Chicken Breast', 'Fried eggs', 'Peanut Butter', 'Pork roast', 'chicken patty', 'Pear ', 'tapioca pudding, vanilla and other flavors, homemade', 'rice pudding, plain, made with egg', 'plain yogurt, lowfat', 'oatmeal, regular cooking', 'macaroni noodles', 'angel hair pasta', 'chocolate pudding, from mix, instant', 'garbanzo beans', 'cottage cheese']
+            
             </button>
           </h5>
         </div>
@@ -64,6 +67,9 @@ components.html(
     """,
     height=600,
 )
+
+from bertopic import BERTopic
+import pandas as pd
 
 # from dash import Dash, dcc, html, Input, Output
 # import plotly.express as px
