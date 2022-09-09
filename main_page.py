@@ -452,18 +452,18 @@ opsis_labels = ["Minestrone with beef",
 "ziti"]
 
 #@st.cache(persist=True)
-@st.experimental_memo(persist="disk")
-def run_topic_model():
-    docs = opsis_labels
-    topic_model = BERTopic(seed_topic_list=opsis_labels)
-    topics, probs = topic_model.fit_transform(docs)
-    return data
+# @st.experimental_memo(persist="disk")
+# def run_topic_model():
+#     docs = opsis_labels
+#     topic_model = BERTopic(seed_topic_list=opsis_labels)
+#     topics, probs = topic_model.fit_transform(docs)
+#     return data
 
-run_topic_model()
+# run_topic_model()
 
-# docs = opsis_labels
-# topic_model = BERTopic(seed_topic_list=opsis_labels)
-# topics, probs = topic_model.fit_transform(docs)
+docs = opsis_labels
+topic_model = BERTopic(seed_topic_list=opsis_labels)
+topics, probs = topic_model.fit_transform(docs)
 
 fig_hier = topic_model.visualize_hierarchy(width=2000, height=2000)
 
