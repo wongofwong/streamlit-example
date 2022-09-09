@@ -459,7 +459,8 @@ def run_topic_model():
     topics, probs = topic_model.fit_transform(docs)
     return data
 
-run_topic_model   
+run_topic_model()
+
 # docs = opsis_labels
 # topic_model = BERTopic(seed_topic_list=opsis_labels)
 # topics, probs = topic_model.fit_transform(docs)
