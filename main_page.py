@@ -455,7 +455,7 @@ docs = opsis_labels
 topic_model = BERTopic(seed_topic_list=opsis_labels)
 topics, probs = topic_model.fit_transform(docs)
 
-topic_model.visualize_hierarchy(width=2000, height=2000)
+fig_hier = topic_model.visualize_hierarchy(width=2000, height=2000)
 
 # from dash import Dash, dcc, html, Input, Output
 # import plotly.express as px
@@ -494,6 +494,8 @@ import streamlit as st
 import plotly.figure_factory as ff
 import numpy as np
 
+st.plotly_chart(fig_hier, use_container_width=True)
+
 # Add histogram data
 x1 = np.random.randn(200) - 2
 x2 = np.random.randn(200)
@@ -511,11 +513,11 @@ fig = ff.create_distplot(
 # Plot!
 st.plotly_chart(fig, use_container_width=True)
 
-import plotly.express as px
+# import plotly.express as px
 
-fig = px.line(x=["a","b","c"], y=[1,3,2], title="sample figure")
-print(fig)
-fig.show()
+# fig = px.line(x=["a","b","c"], y=[1,3,2], title="sample figure")
+# print(fig)
+# fig.show()
 
 # import plotly.graph_objects as go
 
