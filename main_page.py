@@ -504,7 +504,7 @@ import streamlit as st
 import plotly.figure_factory as ff
 import numpy as np
 
-st.plotly_chart(fig_hier) #, use_container_width=True)
+st.plotly_chart(fig_hier, use_container_width=True)
 
 # # Add histogram data
 # x1 = np.random.randn(200) - 2
