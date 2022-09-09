@@ -451,9 +451,18 @@ opsis_labels = ["Minestrone with beef",
 "fettucini noodles, without egg",
 "ziti"]
 
-docs = opsis_labels
-topic_model = BERTopic(seed_topic_list=opsis_labels)
-topics, probs = topic_model.fit_transform(docs)
+#@st.cache(persist=True)
+@st.experimental_memo(persist="disk")
+ def run_topic_model():
+    docs = opsis_labels
+    topic_model = BERTopic(seed_topic_list=opsis_labels)
+    topics, probs = topic_model.fit_transform(docs)
+    return data
+
+run_topic_model   
+# docs = opsis_labels
+# topic_model = BERTopic(seed_topic_list=opsis_labels)
+# topics, probs = topic_model.fit_transform(docs)
 
 fig_hier = topic_model.visualize_hierarchy(width=2000, height=2000)
 
@@ -494,24 +503,24 @@ import streamlit as st
 import plotly.figure_factory as ff
 import numpy as np
 
-st.plotly_chart(fig_hier, use_container_width=True)
+st.plotly_chart(fig_hier) #, use_container_width=True)
 
-# Add histogram data
-x1 = np.random.randn(200) - 2
-x2 = np.random.randn(200)
-x3 = np.random.randn(200) + 2
+# # Add histogram data
+# x1 = np.random.randn(200) - 2
+# x2 = np.random.randn(200)
+# x3 = np.random.randn(200) + 2
 
-# Group data together
-hist_data = [x1, x2, x3]
+# # Group data together
+# hist_data = [x1, x2, x3]
 
-group_labels = ['Group 1', 'Group 2', 'Group 3']
+# group_labels = ['Group 1', 'Group 2', 'Group 3']
 
-# Create distplot with custom bin_size
-fig = ff.create_distplot(
-         hist_data, group_labels, bin_size=[.1, .25, .5])
+# # Create distplot with custom bin_size
+# fig = ff.create_distplot(
+#          hist_data, group_labels, bin_size=[.1, .25, .5])
 
-# Plot!
-st.plotly_chart(fig, use_container_width=True)
+# # Plot!
+# st.plotly_chart(fig, use_container_width=True)
 
 # import plotly.express as px
 
