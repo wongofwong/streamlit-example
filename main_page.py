@@ -17,10 +17,17 @@ add_selectbox = st.sidebar.selectbox(
     ('UMAP', 'PCA', 'Truncated SVD')
 )
 
-add_selectbox = st.sidebar.selectbox(
-    'Visualization',
-    ('Topics Word Scores Barchart', 'Intertopic Distance Map', 'Hierarchical Clustering', 'Similarity Heat Map', 'Topic Frequency Distribution')
-)
+# add_selectbox = st.sidebar.selectbox(
+#     'Visualization',
+#     ('Topics Word Scores Barchart', 'Intertopic Distance Map', 'Hierarchical Clustering', 'Similarity Heat Map', 'Topic Frequency Distribution')
+# )
+
+viz_options = ['Topics Word Scores Barchart', 'Intertopic Distance Map', 'Hierarchical Clustering']
+
+selected = st.selectbox('Visualization', options = viz_options)
+
+if viz_selected == 'Topics Word Scores Barchart':
+    st.markdown("[Section 1: Section 1: Topics Barchart](#section-1)")
 
 # import streamlit as st
 import streamlit.components.v1 as components
@@ -516,8 +523,13 @@ import streamlit as st
 import plotly.figure_factory as ff
 import numpy as np
 
+st.header("Section 1: Topics Barchart")
 st.plotly_chart(fig_barchart, use_container_width=True)
+
+st.header("Section 2: Topics Clusters")
 st.plotly_chart(fig_docs, use_container_width=True)
+
+st.header("Section 3: Hierarchical Clusters")
 st.plotly_chart(fig_hier, use_container_width=True)
 # st.plotly_chart(fig_term_rank, use_container_width=True)
 # st.plotly_chart(fig_heatmap, use_container_width=True)
