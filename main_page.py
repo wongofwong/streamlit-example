@@ -516,13 +516,13 @@ import streamlit as st
 import plotly.figure_factory as ff
 import numpy as np
 
-st.plotly_chart(fig_hier, use_container_width=True)
-st.plotly_chart(fig_term_rank, use_container_width=True)
-st.plotly_chart(fig_heatmap, use_container_width=True)
-st.plotly_chart(fig_topics, use_container_width=True)
 st.plotly_chart(fig_barchart, use_container_width=True)
 st.plotly_chart(fig_docs, use_container_width=True)
-st.plotly_chart(fig_freq, use_container_width=True)
+st.plotly_chart(fig_hier, use_container_width=True)
+# st.plotly_chart(fig_term_rank, use_container_width=True)
+# st.plotly_chart(fig_heatmap, use_container_width=True)
+# st.plotly_chart(fig_topics, use_container_width=True)
+# st.plotly_chart(fig_freq, use_container_width=True)
 
 # # Add histogram data
 # x1 = np.random.randn(200) - 2
