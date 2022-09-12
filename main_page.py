@@ -469,11 +469,11 @@ fig_hier = topic_model.visualize_hierarchy(width=2000, height=2000)
 
 fig_term_rank = topic_model.visualize_term_rank()
 
-fig_heatmap = topic_model.visualize_heatmap()
+fig_heatmap = topic_model.visualize_heatmap(width=1500, height=1500)
 
-fig_topics = topic_model.visualize_topics()
+fig_topics = topic_model.visualize_topics(width=1500, height=800,  top_n_topics=20)
 
-fig_barchart = topic_model.visualize_barchart()
+fig_barchart = topic_model.visualize_barchart(top_n_topics=100, width=200, height=200)
 
 fig_docs = topic_model.visualize_documents(docs)
 
