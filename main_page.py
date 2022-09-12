@@ -24,7 +24,7 @@ add_selectbox = st.sidebar.selectbox(
 
 viz_options = ['Topics Word Scores Barchart', 'Intertopic Distance Map', 'Hierarchical Clustering']
 
-viz_selected = st.selectbox('Visualization', options = viz_options)
+viz_selected = st.sidebar.selectbox('Visualization', options = viz_options)
 
 if viz_selected == 'Topics Word Scores Barchart':
     st.markdown("[Section 1: Section 1: Topics Barchart](#section-1)")
