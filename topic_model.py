@@ -105,7 +105,7 @@ fig_term_rank = topic_model.visualize_term_rank()
 
 fig_heatmap = topic_model.visualize_heatmap(width=1500, height=1500)
 
-fig_topics = topic_model.visualize_topics(width=1500, height=800) #,  top_n_topics=100)
+fig_topics = topic_model.visualize_topics(width=1500, height=800, top_n_topics=100)
 
 fig_barchart = topic_model.visualize_barchart(top_n_topics=100, width=200, height=200)
 
