@@ -92,8 +92,10 @@ import pandas as pd
 #     return data
 
 # run_topic_model()
+df = pd.read_json('clipsubset.json')
+captions = df['caption'].values
 
-docs = opsis_labels
+docs = captions
 topic_model = BERTopic()
 topics, probs = topic_model.fit_transform(docs)
 
