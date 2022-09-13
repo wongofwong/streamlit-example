@@ -22,16 +22,16 @@ add_selectbox = st.sidebar.selectbox(
 #     ('Topics Word Scores Barchart', 'Intertopic Distance Map', 'Hierarchical Clustering', 'Similarity Heat Map', 'Topic Frequency Distribution')
 # )
 
-viz_options = ['Topics Word Scores Barchart', 'Intertopic Distance Map', 'Hierarchical Clustering']
+# viz_options = ['Topics Word Scores Barchart', 'Intertopic Distance Map', 'Hierarchical Clustering']
 
-viz_selected = st.sidebar.selectbox('Visualization', options = viz_options)
+# viz_selected = st.sidebar.selectbox('Visualization', options = viz_options)
 
-if viz_selected == 'Topics Word Scores Barchart':
-    st.markdown("[Section 1: Topics Barchart](#section-1)")
-elif viz_selected == 'Intertopic Distance Map':
-    st.markdown("[Section 2: Topics Clusters](#section-2)")
-elif viz_selected == 'Hierarchical Clustering':   
-    st.markdown("[Section 3: Hierarchical Clusters](#section-3)")
+# if viz_selected == 'Topics Word Scores Barchart':
+#     st.markdown("[Section 1: Topics Barchart](#section-1)")
+# elif viz_selected == 'Intertopic Distance Map':
+#     st.markdown("[Section 2: Topics Clusters](#section-2)")
+# elif viz_selected == 'Hierarchical Clustering':   
+#     st.markdown("[Section 3: Hierarchical Clusters](#section-3)")
     
 # import streamlit as st
 import streamlit.components.v1 as components
