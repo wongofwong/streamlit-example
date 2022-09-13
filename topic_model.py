@@ -107,7 +107,7 @@ fig_heatmap = topic_model.visualize_heatmap(width=1500, height=1500)
 
 fig_topics = topic_model.visualize_topics(width=1500, height=800, top_n_topics=10)
 
-fig_docs_clusters = topic_model.visualize_documents(docs, topics = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 46, 49])
+fig_docs_clusters = topic_model.visualize_documents(docs, topics = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 28, 77, 80, 91, 23, 25, 17])
 
 fig_barchart = topic_model.visualize_barchart(top_n_topics=100, width=200, height=200)
 
