@@ -33,7 +33,7 @@ add_selectbox = st.sidebar.selectbox(
 # elif viz_selected == 'Hierarchical Clustering':   
 #     st.markdown("[Section 3: Hierarchical Clusters](#section-3)")
     
-# import streamlit as st
+#import streamlit as st
 import streamlit.components.v1 as components
 
 # # bootstrap 4 collapse example
