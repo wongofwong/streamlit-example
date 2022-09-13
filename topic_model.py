@@ -1,7 +1,7 @@
 import streamlit as st
 
-st.markdown("# Data Manager - BERTopic Modeling ")
-st.sidebar.markdown("# Data Manager - BERTopic Modeling ")
+st.markdown("# Data Manager - Topic Modeling ")
+st.sidebar.markdown("# Data Manager - Topic Modeling ")
 
 ## layout ##
 
