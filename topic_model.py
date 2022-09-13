@@ -107,9 +107,11 @@ fig_heatmap = topic_model.visualize_heatmap(width=1500, height=1500)
 
 fig_topics = topic_model.visualize_topics(width=1500, height=800, top_n_topics=10)
 
+fig_docs_clusters = topic_model.visualize_documents(docs, topics = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 46, 49])
+
 fig_barchart = topic_model.visualize_barchart(top_n_topics=100, width=200, height=200)
 
-fig_docs = topic_model.visualize_documents(docs)
+#fig_docs = topic_model.visualize_documents(docs)
 
 fig_freq = topic_model.get_topic_freq()
 
@@ -154,7 +156,7 @@ st.header("Section 1: Topics Barchart")
 st.plotly_chart(fig_barchart, use_container_width=True)
 
 st.header("Section 2: Topics Clusters")
-st.plotly_chart(fig_docs, use_container_width=True)
+st.plotly_chart(fig_docs_clusters, use_container_width=True)
 
 st.header("Section 3: Hierarchical Clusters")
 st.plotly_chart(fig_hier, use_container_width=True)
