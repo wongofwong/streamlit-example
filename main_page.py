@@ -6,6 +6,13 @@ st.sidebar.markdown("# Data Manager - BERTopic Modeling ")
 ## layout ##
 
 #sidebar
+
+# Add a selectbox to the sidebar:
+add_selectbox = st.sidebar.selectbox(
+    'Language Filters',
+    ('English Only', 'Multi-lingual')
+)
+
 # Add a selectbox to the sidebar:
 add_selectbox = st.sidebar.selectbox(
     'BERTopic Model Approaches',
