@@ -43,6 +43,8 @@ elif viz_selected == 'Hierarchical Clustering':
 # import streamlit as st
 import streamlit.components.v1 as components
 
+num_turns = st.slider("Number of topics", 1, 100, 9)
+
 # # bootstrap 4 collapse example
 # components.html(
 #     """
