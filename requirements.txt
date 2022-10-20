@@ -7,3 +7,5 @@ dash
 numpy
 scipy
 bertopic
+hdbscan
+umap
