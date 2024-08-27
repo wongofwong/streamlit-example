@@ -13,3 +13,4 @@ hdbscan
 umap
 torch
 clip
+st_clickable_images
