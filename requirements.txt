@@ -3,9 +3,12 @@ pandas
 streamlit
 plotly
 plotly.express
+matplotlib
 dash
 numpy
 scipy
 bertopic
 hdbscan
 umap
+torch
+clip
