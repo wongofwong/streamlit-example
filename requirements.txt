@@ -1,6 +1,7 @@
 altair
 pandas
 streamlit
+streamlit_ace
 plotly
 plotly.express
 matplotlib
