@@ -1,6 +1,5 @@
 """
-# My first app
-Here's our first attempt at using data to create a table:
+Model Analyzer and Embedding Projector
 """
 
 import streamlit as st
@@ -82,8 +81,13 @@ import streamlit as st
 #sidebar
 # Add a selectbox to the sidebar:
 add_selectbox = st.sidebar.selectbox(
-    'BERTopic Model Approaches',
-    ('Default', 'Sentence Transformer', 'Guided Topic Modeling', 'Supervised', 'Semi-supervised')
+    'Model Runs',
+    ('din/spreads-for-benchmarking-new-pythonsim-27a24b2494c94741b987f9c41c3339dc/null')
+)
+
+add_selectbox = st.sidebar.selectbox(
+    'Dataset',
+    ('Training', 'Validation', 'Test')
 )
 
 add_selectbox = st.sidebar.selectbox(
