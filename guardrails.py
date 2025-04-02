@@ -21,7 +21,7 @@ def brand_compliance_guardrails(text):
 st.title("Brand Compliance Checker")
 
 # File Upload
-uploaded_file = st.file_uploader("Upload Brand Guidelines Document", type=["txt", "pdf", "docx"])  # Support more file types as needed
+uploaded_file = st.file_uploader("ic-brand-style-guide-template-11866_word_0.docx", type=["txt", "pdf", "docx"])  # Support more file types as needed
 
 
 if uploaded_file is not None:
