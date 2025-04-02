@@ -2,6 +2,7 @@
 
 import streamlit as st
 import pandas as pd
+from io import StringIO
 
 # Placeholder for LLM interaction (replace with actual LLM API calls)
 def llm_compliance_check(text):
@@ -34,6 +35,12 @@ uploaded_file = st.file_uploader("ic-brand-style-guide-template-11866_word_0.doc
 
 # uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
+    try:
+#         # Placeholder for document processing (replace with actual file reading and text extraction)
+#         # You'll need to use a library like PyPDF2, docx2txt, or similar to extract the text
+#         # from different file types.
+
+#        
         # To read file as bytes:
         bytes_data = uploaded_file.getvalue()
         st.write(bytes_data)
